@@ -1,0 +1,116 @@
+.container-ai {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-vehicle{ 
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.card-vehicle:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #4aa3d6 0px 0px 0px 3px;
+}
+
+.cards-container {
+    margin: 0% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-img-top {
+    border-radius: 15px;
+}
+
+.teste {
+    background-color: greenyellow;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.modal-caixa {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-conteudo {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-cabeca {
+    padding: 2px 16px;
+    color: black;
+  }
+  
+  .modal-corpo {padding: 2px 16px;}
+  
+  .modal-pe {
+    padding: 2px 16px;
+    color: white;
+
+  }
+
+  .imgEdit {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  @media screen and (max-width: 900px) {
+    .modal-caixa {
+      width: 100%;
+    }
+  }
