@@ -20,14 +20,14 @@ use App\Http\Controllers\ModeloUserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 Route::get('/login', [UserController::class, 'showLoginView'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate']);
 Route::get('/register', [RegisterController::class, 'showRegisterView']);
 Route::post('/register/user', [RegisterController::class, 'newUser']);
 Route::middleware('auth')->group(function() {
-    Route::get('/home', [MaintenanceController::class, 'getMaintenancesNextSevenDays']);
+    Route::get('/home', [MaintenanceController::class, 'getMaintenancesNextSevenDays'])->name('home');
     Route::get('/my-vehicles/vehicles', [ModeloUserController::class, 'getAllVehicles']);
     Route::post('/new/vehicle', [ModeloUserController::class, 'newVehicle']);
     Route::get('/vehicle/{id}', [ModeloUserController::class, 'showVehicle']);
